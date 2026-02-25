@@ -47,7 +47,7 @@ const Hero = () => {
 
           {/* CTA Buttons - Centered */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 font-geist">
-            <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200 ">
+            <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
               Join with Google{" "}
               <span className="bg-[#F8F7F9] rounded-[36px] p-2 shadow-sm bg-[#16004108]">
                 <FcGoogle className="text-lg" />

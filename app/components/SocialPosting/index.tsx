@@ -101,7 +101,7 @@ const SocialPosting = () => {
                   Schedule for Today at 7:00 PM
                 </span>
 
-                <button className="lg:flex hidden bg-[#FF6D00] text-white font-semibold rounded-full flex items-center gap-1 shadow-md hover:scale-105 transition-transform pr-[9px] w-full lg:w-auto justify-center lg:justify-start">
+                <button className="lg:flex hidden bg-[#FF6D00] text-white font-semibold rounded-full flex items-center gap-1 shadow-md hover:scale-105 transition-transform pr-[9px] w-full lg:w-auto justify-center lg:justify-start cursor-pointer">
                   <span className="text-[14px] border-r border-white rounded-r-full py-2 px-[12px] pl-[16px]">
                     Schedule
                   </span>
@@ -139,7 +139,7 @@ const SocialPosting = () => {
                       placeholder="example@domain.com"
                       className="w-full lg:flex-1 border border-[#3300800F] shadow-[0px_1px_2px_0px_#3300800F] rounded-lg px-3 py-2 text-xs outline-none focus:border-indigo-500 placeholder:text-[#737A87] placeholder:text-[13px] placeholder:font-roboto"
                     />
-                    <button className="w-full lg:w-auto bg-[#4F46E5] text-white text-[13px] px-4 py-2 rounded-lg">
+                    <button className="w-full lg:w-auto bg-[#4F46E5] text-white text-[13px] px-4 py-2 rounded-lg cursor-pointer">
                       Send Invite
                     </button>
                   </div>

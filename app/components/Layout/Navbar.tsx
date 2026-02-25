@@ -55,13 +55,13 @@ const Navbar = () => {
 
         {/* Right Side Buttons - Desktop (Visible above 1300px) */}
         <div className="hidden min-[1301px]:flex items-center gap-3 font-geist">
-          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-full transition-all border border-transparent hover:border-gray-200">
+          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
             Join with Google{" "}
             <span className="bg-white rounded-[36px] p-2 shadow-sm">
               <FcGoogle className="text-lg" />
             </span>
           </button>
-          <button className="flex items-center gap-2 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-white bg-[#6E43FC] rounded-full transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group">
+          <button className="flex items-center gap-2 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-white bg-[#6E43FC] rounded-full transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group cursor-pointer">
             Start For Free
             <div className="bg-[#ffffff] text-[#6E43FC] rounded-[36px] p-2 group-hover:translate-x-0.5 transition-transform">
               <HiArrowRight size={12} />
@@ -73,7 +73,7 @@ const Navbar = () => {
         <div className="min-[1301px]:hidden">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="p-2 text-gray-700 hover:text-[#4F46E5] transition-colors"
+            className="p-2 text-gray-700 hover:text-[#4F46E5] transition-colors cursor-pointer"
           >
             <CgMenuLeftAlt size={28} color="#6E43FC" />
           </button>
@@ -108,7 +108,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="p-2 text-[#667085] hover:text-[#160041]"
+                className="p-2 text-[#667085] hover:text-[#160041] cursor-pointer"
               >
                 <FaTimes size={20} />
               </button>
@@ -132,10 +132,10 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col gap-3 mt-8">
-              <button className="flex items-center justify-center gap-2 px-5 py-3 text-base font-semibold text-gray-700 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all border border-gray-200">
+              <button className="flex items-center justify-center gap-2 px-5 py-3 text-base font-semibold text-gray-700 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all border border-gray-200 cursor-pointer">
                 Join with Google <FcGoogle className="text-lg" />
               </button>
-              <button className="flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#6E43FC] rounded-xl hover:bg-[#4f46e5] transition-all shadow-lg shadow-indigo-200">
+              <button className="flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#6E43FC] rounded-xl hover:bg-[#4f46e5] transition-all shadow-lg shadow-indigo-200 cursor-pointer">
                 Start For Free <HiArrowRight />
               </button>
             </div>

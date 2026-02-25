@@ -35,7 +35,7 @@ export const PricingCard = ({
   const renderButton = () => {
     if (buttonColor === "primary") {
       return (
-        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full bg-[#6E43FC] hover:bg-[#5B33DF] transition-colors relative z-10 shadow-[0_8px_24px_rgba(110,67,252,0.25)]">
+        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full bg-[#6E43FC] hover:bg-[#5B33DF] transition-colors relative z-10 shadow-[0_8px_24px_rgba(110,67,252,0.25)] cursor-pointer">
           <span className="text-white font-semibold font-geist text-[15px]">
             {buttonText}
           </span>
@@ -48,7 +48,7 @@ export const PricingCard = ({
 
     if (buttonColor === "sales") {
       return (
-        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition-colors">
+        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition-colors cursor-pointer">
           <span className="text-[#1266F7] font-semibold font-geist text-[15px]">
             {buttonText}
           </span>

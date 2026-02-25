@@ -51,7 +51,7 @@ const CTA = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-3 font-geist justify-center my-[32px] w-full max-w-[400px] lg:max-w-none mx-auto relative z-20">
-          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200">
+          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
             Join with Google{" "}
             <span className="bg-[#F8F7F9 rounded-[36px] p-2 shadow-sm bg-[#16004108]">
               <FcGoogle className="text-lg" />
