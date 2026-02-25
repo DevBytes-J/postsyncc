@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif:
+    var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+  --font-geist: var(--font-geist-sans), sans-serif;
+  --font-britti: var(--font-britti), sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffffff;
+    --foreground: #ffffffff;
+  }
+} /* Fallback Utilities */
+.font-palanquin {
+  font-family: var(--font-palanquin-dark), sans-serif;
+}
+
+.font-garamond {
+  font-family: var(--font-eb-garamond), serif;
+}
+
+.font-geist {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.font-britti {
+  font-family: var(--font-britti);
+}
+
+/* Custom Animations for UI consistency */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-1rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Custom Spin Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 60s linear infinite;
+}
+
+.animate-counter-spin-slow {
+  animation: counter-spin 60s linear infinite;
+}
+
+.animate-in {
+  animation:
+    fadeIn 0.3s ease-out forwards,
+    slideInFromTop 0.3s ease-out forwards;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll from any potential overflow */
+}
