@@ -97,7 +97,7 @@ const SocialPosting = () => {
 
               {/* Schedule Bar */}
               <div className="flex flex-col lg:flex-row items-center justify-between mt-8 pt-4 gap-4 lg:gap-0">
-                <span className=" text-[11px] lg:text-xs font-medium text-[#160041] bg-[#FBFBFB] p-4 rounded-[12px] font-roboto border border-[#16004108] w-full lg:w-auto text-center lg:text-left break-words whitespace-normal">
+                <span className=" text-[11px] lg:text-xs font-medium text-[#160041] bg-[#FBFBFB] p-4 rounded-[12px] font-roboto border border-[#16004108] w-full lg:w-auto text-center lg:text-left break-words whitespace-normal cursor-pointer">
                   Schedule for Today at 7:00 PM
                 </span>
 

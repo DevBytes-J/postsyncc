@@ -29,7 +29,7 @@ const AIContentStudioCard = () => {
           2, VEO 3 and more
         </p>
 
-        <div className="bg-white rounded-2xl p-3 shadow-sm w-full mt-4 text-left border border-[#F0E7FF]">
+        <div className="bg-white rounded-2xl p-3 shadow-sm w-full mt-4 text-left border border-[#F0E7FF] cursor-pointer">
           <p className="text-[#8B92A1] text-[11px] mb-2 font-roboto leading-relaxed">
             Describe your video with shot type, subject, action, setting, and
             lighting. Example: Wide shot of a child flying a red kite in grassy

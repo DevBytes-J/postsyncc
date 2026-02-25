@@ -30,7 +30,7 @@ const Navbar = () => {
     <>
       <nav className="flex items-center justify-between px-[18px] lg:px-6 py-[12px] w-full max-w-6xl bg-white/80 backdrop-blur-md rounded-full shadow-lg shadow-gray-200/50 border border-white/50 transition-all duration-300 mx-[5px] relative z-100">
         {/* Logo Section */}
-        <div className="flex items-center gap-[2px] justify-center">
+        <div className="flex items-center gap-[2px] justify-center cursor-pointer">
           <div className=" ">
             <Image src="/logo.png" alt="Logo" width={24} height={24} />
           </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/20 backdrop-blur-sm cursor-pointer"
           onClick={() => setMobileMenuOpen(false)}
         />
 
@@ -102,7 +102,7 @@ const Navbar = () => {
         >
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 cursor-pointer">
                 <Image src="/logo.png" alt="Logo" width={24} height={24} />
                 <span className="font-bold text-[#1e1b4b]">PostSyncer</span>
               </div>

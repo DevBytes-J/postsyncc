@@ -45,27 +45,27 @@ const Rings = () => {
       {/* Outer Ring */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] lg:w-[500px] lg:h-[500px] border border-[#6E43FC0F] rounded-full z-10 animate-spin-slow">
         {/* Instagram - Top Center (0 degrees) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#E1306C] animate-counter-spin-slow border border-[#A060FF0D]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#E1306C] animate-counter-spin-slow border border-[#A060FF0D] cursor-pointer">
           <FaInstagram className="text-xl lg:text-[30px]" />
         </div>
 
         {/* Pinterest - Left (approximately 216 degrees) */}
-        <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#E60023] animate-counter-spin-slow border border-[#A060FF0D]">
+        <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#E60023] animate-counter-spin-slow border border-[#A060FF0D] cursor-pointer">
           <FaPinterest className="text-xl lg:text-[30px]" />
         </div>
 
         {/* X (Twitter) - Right (approximately 324 degrees) */}
-        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-black animate-counter-spin-slow border border-[#A060FF0D]">
+        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-black animate-counter-spin-slow border border-[#A060FF0D] cursor-pointer">
           <BsTwitterX className="text-xl lg:text-[30px]" />
         </div>
 
         {/* Facebook - Bottom Left (approximately 144 degrees) */}
-        <div className="absolute bottom-[5%] left-[15%] bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#1877F2] animate-counter-spin-slow border border-[#A060FF0D]">
+        <div className="absolute bottom-[5%] left-[15%] bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-[#1877F2] animate-counter-spin-slow border border-[#A060FF0D] cursor-pointer">
           <FaFacebookF className="text-xl lg:text-[30px]" />
         </div>
 
         {/* Tiktok - Bottom Right (approximately 36 degrees) */}
-        <div className="absolute bottom-[5%] right-[15%] bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-black animate-counter-spin-slow border border-[#A060FF0D]">
+        <div className="absolute bottom-[5%] right-[15%] bg-white p-2 lg:p-[26px] rounded-xl shadow-lg text-black animate-counter-spin-slow border border-[#A060FF0D] cursor-pointer">
           <FaTiktok className="text-xl lg:text-[30px]" />
         </div>
       </div>

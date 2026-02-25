@@ -13,7 +13,7 @@ const FeatureGrid = () => {
         <div className="text-center mb-20 ">
           {" "}
           <div className="flex justify-center mb-3 -mt-[30px] z-70 relative">
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D]">
+            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D] cursor-pointer">
               <Image
                 src="/logo.png"
                 alt="Badge"
@@ -47,7 +47,7 @@ const FeatureGrid = () => {
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
                 <div className="lg:w-[40%]">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-3 lg:mt-[93px] mt-0">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-3 lg:mt-[93px] mt-0 cursor-pointer">
                     <Image
                       src="/logo.png"
                       alt="Badge"
@@ -117,7 +117,7 @@ const FeatureGrid = () => {
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
                 <div className="lg:w-[40%]">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px]">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px] cursor-pointer">
                     <Image
                       src="/logo.png"
                       alt="Badge"
@@ -188,7 +188,7 @@ const FeatureGrid = () => {
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
                 <div className="lg:w-[40%]">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px]">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px] cursor-pointer">
                     <Image
                       src="/logo.png"
                       alt="Badge"

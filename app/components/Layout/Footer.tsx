@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-4">
           {/* Logo & Info */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <div className="flex items-center gap-2 font-bold text-[#160041] text-[20px] mb-4">
+            <div className="flex items-center gap-2 font-bold text-[#160041] text-[20px] mb-4 cursor-pointer">
               <div className="w-6 h-6 bg-[#160041] rounded-[6px] flex items-center justify-center text-white relative">
                 <Image
                   src="/logo.png"

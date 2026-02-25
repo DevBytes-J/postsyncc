@@ -52,7 +52,7 @@ const Testimonials = () => {
       <Curve />
       <div className="lg:px-[96px] pb-[96px] p-6">
         <div className="flex justify-center mb-[] -mt-[50px] z-70 relative">
-          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold cursor-pointer">
             <Image
               src="/logo.png"
               alt="Badge"

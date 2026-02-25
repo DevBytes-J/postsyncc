@@ -9,7 +9,7 @@ const VideoSection = () => {
       <div className="lg:px-[96px] px-6 text-center">
         {/* Badge */}
         <div className="flex justify-center mb-3">
-          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D]">
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D] cursor-pointer">
             <Image
               src="/logo2.png"
               alt="Badge"

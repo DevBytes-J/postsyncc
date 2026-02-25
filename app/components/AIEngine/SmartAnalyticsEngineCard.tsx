@@ -4,7 +4,7 @@ import { RiFireLine } from "react-icons/ri";
 const SmartAnalyticsEngineCard = () => {
   return (
     <div className="bg-[#FBFBFB] rounded-[32px] p-4 md:p-6 flex flex-col h-full">
-      <div className="bg-white rounded-3xl p-4 shadow-sm flex flex-col flex-1 mb-6">
+      <div className="bg-white rounded-3xl p-4 shadow-sm flex flex-col flex-1 mb-6 cursor-pointer">
         <div className="flex justify-between items-start mb-6">
           <div>
             <div className="text-[18px] font-bold text-[#000000] mb-1 font-roboto flex items-center">
