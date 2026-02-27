@@ -35,11 +35,11 @@ export const PricingCard = ({
   const renderButton = () => {
     if (buttonColor === "primary") {
       return (
-        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full bg-[#6E43FC] hover:bg-[#5B33DF] transition-colors relative z-10 shadow-[0_8px_24px_rgba(110,67,252,0.25)] cursor-pointer">
+        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] p-[8px] rounded-[39px] bg-[#6E43FC] hover:bg-[#5B33DF] transition-colors relative z-10 shadow-[0_8px_24px_rgba(110,67,252,0.25)] cursor-pointer">
           <span className="text-white font-semibold font-geist text-[15px]">
             {buttonText}
           </span>
-          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#6E43FC] transition-colors">
+          <div className="p-[10px] rounded-[20px] bg-white flex items-center justify-center text-[#6E43FC] transition-colors">
             <BsArrowRight />
           </div>
         </button>
@@ -48,11 +48,11 @@ export const PricingCard = ({
 
     if (buttonColor === "sales") {
       return (
-        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition-colors cursor-pointer">
+        <button className="w-full flex items-center justify-between group mt-auto pl-[16px] p-[8px] rounded-[39px] border-2 border-[#F1EDFF] bg-white hover:bg-gray-50 transition-colors cursor-pointer">
           <span className="text-[#1266F7] font-semibold font-geist text-[15px]">
             {buttonText}
           </span>
-          <div className="w-8 h-8 bg-[#F4F8FF] rounded-[36px] flex items-center justify-center text-[#1266F7] transition-colors">
+          <div className="p-[10px] bg-[#F4F8FF] rounded-[20px] flex items-center justify-center text-[#1266F7] transition-colors">
             <BsArrowRight />
           </div>
         </button>
@@ -61,11 +61,11 @@ export const PricingCard = ({
 
     // secondary (default)
     return (
-      <button className="w-full flex items-center justify-between group mt-auto pl-[16px] pr-[4px] py-[11px] rounded-full border border-gray-200 bg-white hover:bg-gray-50 transition-colors">
+      <button className="w-full flex items-center justify-between group mt-auto pl-[16px] p-[8px] rounded-[39px] border-2 border-[#F1EDFF] bg-white hover:bg-gray-50 transition-colors">
         <span className="text-[#6E43FC] font-semibold font-geist text-[16px]">
           {buttonText}
         </span>
-        <div className="w-8 h-8 bg-[#F1EDFF] rounded-[36px] flex items-center justify-center text-[#6E43FC] transition-colors">
+        <div className="p-[10px] bg-[#F1EDFF] rounded-[20px] flex items-center justify-center text-[#6E43FC] transition-colors">
           <BsArrowRight />
         </div>
       </button>
@@ -77,31 +77,62 @@ export const PricingCard = ({
   if (isFeatured) {
     return (
       <div
-        className={`${containerClassName} mb-8 md:mb-0 ${onClick ? "cursor-pointer" : ""}`}
+        className={`${containerClassName} relative isolate mb-8 md:mb-0 ${onClick ? "cursor-pointer" : ""}`}
         onClick={onClick}
       >
-        {/* Decorative corner images */}
-        <img
-          src="/pricing1.png"
-          alt=""
-          className="absolute left-0 top-0 pointer-events-none z-0"
-        />
-        <img
-          src="/pricing2.png"
-          alt=""
-          className="absolute right-0 top-0 pointer-events-none z-0"
-        />
-
-        {/* Outer frosted container */}
-        <div className="relative overflow-hidden bg-white/40 p-1 backdrop-blur-xl shadow-[0_24px_48px_-12px_rgba(100,100,200,0.12)]">
-          {/* ── Glow blobs INSIDE the outer container ── */}
-          {/* Blue glow — top-left */}
-          <div className="absolute -top-16 -left-16 h-[300px] w-[300px] rounded-full bg-[#1266F7]/15 blur-[80px] pointer-events-none" />
-          {/* Purple glow — top-right */}
-          <div className="absolute -top-16 -right-16 h-[300px] w-[300px] rounded-full bg-[#6E43FC]/15 blur-[80px] pointer-events-none" />
-
-          {/* Header — in the translucent outer area */}
-          <div className="pt-8 pb-4 text-center relative z-10">
+        ── Glow blobs (z-0) ──
+        <div className="absolute top-60 -left-12 h-[170px] w-[70px] rounded-full bg-[#1266F7]/15 blur-2xl pointer-events-none z-0 lg:block hidden" />
+        <div className="absolute top-60 -right-12 h-[170px] w-[70px] rounded-full bg-[#6E43FC]/15 blur-2xl pointer-events-none z-0 lg:block hidden" />
+        {/* ── Decorative corner images / manual stack (z-20) ── */}
+        {/* ── RIGHT SIDE STACK ── */}
+        <div
+          className="absolute right-[-30px] top-60 z-20 pointer-events-none"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 30%, black 70%, transparent)",
+            maskImage:
+              "linear-gradient(to right, transparent, black 30%, black 70%, transparent)",
+          }}
+        >
+          <div className="flex flex-col gap-3">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="w-9 h-10 bg-white rounded-md" />
+            ))}
+          </div>
+        </div>
+        {/* ── LEFT SIDE STACK ── */}
+        <div
+          className="absolute left-[-30px] top-60 z-20 pointer-events-none"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to left, transparent, black 30%, black 70%, transparent)",
+            maskImage:
+              "linear-gradient(to left, transparent, black 30%, black 70%, transparent)",
+          }}
+        >
+          <div className="flex flex-col gap-3">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="w-9 h-10 bg-white rounded-md " />
+            ))}
+          </div>
+        </div>
+        {/* ── Frosted container (z-30) ── */}
+        <div className="relative z-30 bg-white/40 backdrop-blur-xl ">
+          <div
+            className="absolute -top-[-8px] left-0 lg:left-1 w-full max-w-[820px] lg:max-w-[334px] h-[150px] blur-[16px] opacity-90 pointer-events-none rounded-t-[32px]"
+            style={{
+              background: "linear-gradient(to right, #eef3ff, #ede8ff)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 0%, black 20%, black 100%)",
+              maskImage:
+                "linear-gradient(to bottom, transparent 0%, black 20%, black 100%)",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskSize: "100% 100%",
+              maskSize: "100% 100%",
+            }}
+          ></div>
+          <div className="pt- pb-4 text-center relative z-10">
             <div className="flex items-center justify-center gap-2 mb-1">
               <h3 className="text-[#160041] font-medium font-geist text-[18px]">
                 {title}
@@ -121,35 +152,42 @@ export const PricingCard = ({
           </div>
 
           {/* Inner white card — features + button */}
-          <div className="mx-1.5 mb-1.5 rounded-[30px] bg-white/90 p-6 lg:p-8 shadow-sm relative z-10">
-            <div className="grow space-y-4 mb-10">
-              {features.map((feature, idx) => (
-                <div
-                  key={idx}
-                  className={`flex items-center ${feature.value ? "justify-between" : "gap-3"} ${!feature.included ? "opacity-50" : ""}`}
-                >
+          <div className="relative rounded-[32px] bg-gradient-to-r from-[#f3f6ff] to-[#f0ecff] p-[2.5px]">
+            <div className="rounded-[30px] bg-white p-6 lg:p-8 relative z-10">
+              <div className="grow space-y-4 mb-10">
+                {features.map((feature, idx) => (
                   <div
-                    className={`flex items-center gap-3 ${!feature.value ? "w-full" : ""}`}
+                    key={idx}
+                    className={`flex items-center ${
+                      feature.value ? "justify-between" : "gap-3"
+                    } ${!feature.included ? "opacity-50" : ""}`}
                   >
-                    {feature.included ? (
-                      <FaCheck className="text-[#6E43FC]" size={14} />
-                    ) : (
-                      <FaMinus className="text-[#66708580]" size={14} />
-                    )}
-                    <span className="text-[#667085] text-[13px] font-geist">
-                      {feature.name}
-                    </span>
-                  </div>
-                  {feature.value && (
-                    <span className="text-[#160041] font-bold text-[13px]">
-                      {feature.value}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
+                    <div
+                      className={`flex items-center gap-3 ${
+                        !feature.value ? "w-full" : ""
+                      }`}
+                    >
+                      {feature.included ? (
+                        <FaCheck className="text-[#6E43FC]" size={14} />
+                      ) : (
+                        <FaMinus className="text-[#66708580]" size={14} />
+                      )}
+                      <span className="text-[#667085] text-[13px] font-geist">
+                        {feature.name}
+                      </span>
+                    </div>
 
-            {renderButton()}
+                    {feature.value && (
+                      <span className="text-[#160041] font-bold text-[13px]">
+                        {feature.value}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {renderButton()}
+            </div>
           </div>
         </div>
       </div>

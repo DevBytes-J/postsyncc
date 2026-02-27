@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface FAQItemProps {
   question: string;
@@ -120,10 +121,25 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="w-full bg-white pb-32 pt-20 overflow-hidden relative"
+      className=" bg-white pb-32 lg:pt-[96px] overflow-hidden"
     >
-      <div className="mx-auto px-6 lg:px-[96px] w-full max-w-[1440px]">
-        <div className="flex items-center gap-2 justify-center  text-[#00005E] text-sm font-medium font-geist">
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden rounded-[16px]"
+        />
+      </div>
+      <div className=" px-6 lg:px-[96px] -mt-[25px] z-70 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-2 justify-center  text-[#00005E] text-sm font-medium font-geist"
+        >
+           <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white text-[#160041] text-sm font-semibold ">
           <Image
             src="/logo.png"
             alt="Badge"
@@ -132,10 +148,17 @@ const FAQ = () => {
             className="object-contain"
           />
           Got Questions?
-        </div>
+          </div>
+        </motion.div>
 
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] lg:text-[56px] font-bold text-[#00005E] leading-tight font-britti tracking-tight mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-[40px] lg:text-[56px] font-bold text-[#00005E] leading-tight font-britti tracking-tight mb-4">
             Frequently Asked
             <br />
             Questions
@@ -143,20 +166,29 @@ const FAQ = () => {
           <p className="text-[#667085] text-[15px] font-geist max-w-2xl mx-auto">
             Join thousands of creators and teams scaling smarter
           </p>
-        </div>
+        </motion.div>
 
         {/* FAQ Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-start">
           {/* Left Column */}
           <div className="flex flex-col gap-4">
             {faqsLeft.map((faq, index) => (
-              <FAQItem
+              <motion.div
                 key={`left-${index}`}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openIndex === index}
-                onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-              />
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <FAQItem
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onToggle={() =>
+                    setOpenIndex(openIndex === index ? -1 : index)
+                  }
+                />
+              </motion.div>
             ))}
           </div>
 
@@ -165,15 +197,22 @@ const FAQ = () => {
             {faqsRight.map((faq, index) => {
               const rightIndex = index + faqsLeft.length;
               return (
-                <FAQItem
+                <motion.div
                   key={`right-${index}`}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openIndex === rightIndex}
-                  onToggle={() =>
-                    setOpenIndex(openIndex === rightIndex ? -1 : rightIndex)
-                  }
-                />
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <FAQItem
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={openIndex === rightIndex}
+                    onToggle={() =>
+                      setOpenIndex(openIndex === rightIndex ? -1 : rightIndex)
+                    }
+                  />
+                </motion.div>
               );
             })}
           </div>

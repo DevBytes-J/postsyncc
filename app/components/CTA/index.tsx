@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import StartButton from "../ui/StartButton";
 import { BsStarFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
@@ -23,12 +24,24 @@ const CTA = () => {
       />
 
       <div className="relative z-10 px-4 lg:px-[96px] text-center w-full">
-        <h2 className="text-[32px] lg:text-[72px] font-semibold text-[#160041] leading-[1.1] font-britti tracking-tight mb-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-[32px] lg:text-[72px] font-semibold text-[#160041] leading-[1.1] font-britti tracking-tight mb-6"
+        >
           Ready To Grow Without The <br className="hidden lg:block" /> Guess
           Work?
-        </h2>
+        </motion.h2>
 
-        <div className="flex-col items-center justify-center text-[#667085] text-[15px] font-geist lg:flex hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex-col items-center justify-center text-[#667085] text-[15px] font-geist lg:flex hidden"
+        >
           <p>Join 1,500+ creators and teams scaling their content</p>
           <div className="flex items-center justify-center gap-1">
             <span>with</span>
@@ -44,24 +57,42 @@ const CTA = () => {
               PostSyncer
             </div>
           </div>
-        </div>
-        <div className="lg:hidden block text-[#667085] text-[15px] font-geist text-center mx-auto max-w-sm">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="lg:hidden block text-[#46468A] text-[15px] font-geist text-center mx-auto max-w-sm"
+        >
           PostSyncer helps you manage all your social accounts, schedule
           content, and create AI videos in minutes.
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-3 font-geist justify-center my-[32px] w-full max-w-[400px] lg:max-w-none mx-auto relative z-20">
-          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col lg:flex-row items-center gap-3 font-geist justify-center my-[32px] w-full max-w-[400px] lg:max-w-none mx-auto relative z-20"
+        >
+          <button className="flex items-center gap-3 pl-[18px] pr-[8px] py-[11px] font-semibold text-[#160041] bg-white rounded-[39px] transition-all border border-transparent hover:border-gray-200 cursor-pointer">
             Join with Google{" "}
-            <span className="bg-[#F8F7F9 rounded-[36px] p-2 shadow-sm bg-[#16004108]">
+            <span className="bg-[#F8F7F9 rounded-[20px] p-[10px] shadow-sm bg-[#16004108]">
               <FcGoogle className="text-lg" />
             </span>
           </button>
           <StartButton />
-        </div>
+        </motion.div>
 
         {/* Avatars & Social Proof */}
-        <div className="flex flex-row gap-[18px] mt-[32px] lg:mt-[33px] items-center justify-center ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-row gap-[18px] mt-[32px] lg:mt-[33px] items-center justify-center "
+        >
           <div className="relative h-10 lg:h-12 w-35 grayscale-[0.0]">
             <Image
               src="/avatars.png"
@@ -82,7 +113,7 @@ const CTA = () => {
               Loved by 1500+ creators
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="hidden lg:block absolute bottom-0 inset-x-0 w-full h-[60%] lg:h-30 bg-linear-to-t from-white to-transparent z-10 pointer-events-none"></div>

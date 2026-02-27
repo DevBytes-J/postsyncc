@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PricingCard, PricingFeature } from "./PricingCard";
 import Curve from "../ui/Curve";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const starterFeatures: PricingFeature[] = [
   { name: "Social Accounts", included: true, value: "5" },
@@ -51,13 +52,26 @@ const Pricing = () => {
 
   // Featured cards now render their own frosted container internally,
   // so containerClassName only needs to handle grid positioning.
-  const getFeaturedClass = () =>
-    "relative lg:-mt-12 lg:-mb-12 z-20 shrink-0 ";
+  const getFeaturedClass = () => "relative lg:-mt-12 lg:-mb-12 z-20 shrink-0 ";
 
   return (
     <section id="pricing" className="pb-32 overflow-hidden relative ">
       <div className="absolute inset-0 bg-[#FBFBFB] mix-blend-multiply -z-10 lg:block hidden" />
-      <Curve />
+            <div className="relative h-[120px] z-50 mx-[16px] ">
+              <Image
+                src="/under2.png"
+                alt="Bottom curve mobile"
+                fill
+                className="object-fill md:hidden rounded-[16px]"
+              />
+              {/* desktop */}
+              <Image
+                src="/under.png"
+                alt="Bottom curve desktop"
+                fill
+                className="object-fill hidden md:block"
+              />
+            </div>
       <div className="mx-[8px]">
         <img
           src="/bg-img.png"
@@ -66,7 +80,13 @@ const Pricing = () => {
         />
         <div className="relative w-full max-w-[1440px] px-4">
           {/* Isolated background blend layer */}
-          <div className="flex justify-center mb-3 -mt-[30px] z-70 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-3 -mt-[30px] z-70 relative"
+          >
             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D]">
               <Image
                 src="/logo.png"
@@ -77,76 +97,106 @@ const Pricing = () => {
               />
               Flexible Pricing
             </div>
-          </div>
+          </motion.div>
           {/* Header */}
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-[32px] lg:text-[56px] font-semibold text-[#160041] leading-tight font-britti tracking-tight mb-4 px-4">
-              Invest in{" "}
-              <span className="text-[#6E43FC] italic font-garamond font-medium">
-                Growth
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-center mb-10 md:mb-16"
+          >
+            <h2 className="text-[40px] lg:text-[56px] font-semibold text-[#160041] leading-tight font-britti tracking-tight mb-4 px-4 flex flex-col items-center">
+              <span className="whitespace-nowrap">
+                Invest in{" "}
+                <span className="text-[#6E43FC] italic font-garamond font-medium">
+                  Growth
+                </span>
+                ,
               </span>
-              ,
-                
-
-              Not Just Tools
+              <span className="whitespace-nowrap">Not Just Tools</span>
             </h2>
-            <p className="text-[#667085] text-[12px] lg:text-[15px] font-geist">
-              Choose a plan built for creators, teams, and agencies. No
-              <br className="lg:block hidden" /> per-user fees. No hidden
-              limits. No surprises.
+            <p className="text-[#667085] text-[14px] lg:text-[15px] font-geist flex flex-col items-center leading-relaxed">
+              <span className="whitespace-nowrap">
+                Choose a plan built for creators, teams,
+              </span>
+              <span className="md:whitespace-nowrap">
+                and agencies. No fees, limits or surprises.
+              </span>
             </p>
-          </div>
+          </motion.div>
 
           {/* Pricing Cards Container */}
-          <div className="mx-0 lg:mx-[96px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-0 lg:p-12 w-auto grid py-6 grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 relative items-center">
-            <PricingCard
-              title="Starter Plan"
-              subtitle="For solo creators and freelancers"
-              price="$19"
-              features={starterFeatures}
-              buttonText="Get Starter"
-              buttonColor={activeTab === "starter" ? "primary" : "secondary"}
-              isFeatured={activeTab === "starter"}
-              onClick={() => setActiveTab("starter")}
-              containerClassName={`flex flex-col ${
-                activeTab === "starter"
-                  ? getFeaturedClass()
-                  : "px-4 lg:px-8 relative lg:border-r border-gray-200"
-              }`}
-            />
+          <div className="mx-0 lg:mx-[96px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-2 lg:p-12 w-auto grid py-6 grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 relative items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <PricingCard
+                title="Starter Plan"
+                subtitle="For solo creators and freelancers"
+                price="$19"
+                features={starterFeatures}
+                buttonText="Get Starter"
+                buttonColor={activeTab === "starter" ? "primary" : "secondary"}
+                isFeatured={activeTab === "starter"}
+                onClick={() => setActiveTab("starter")}
+                containerClassName={`flex flex-col ${
+                  activeTab === "starter"
+                    ? getFeaturedClass()
+                    : "px-[32px] lg:px-8 relative "
+                }`}
+              />
+            </motion.div>
 
-            <PricingCard
-              title="Pro"
-              subtitle="Growing teams and agencies"
-              price="$300"
-              features={proFeatures}
-              buttonText="Get Started For Free"
-              buttonColor={activeTab === "pro" ? "primary" : "secondary"}
-              isFeatured={activeTab === "pro"}
-              showBestValue
-              onClick={() => setActiveTab("pro")}
-              containerClassName={`flex flex-col ${
-                activeTab === "pro"
-                  ? getFeaturedClass()
-                  : "px-4 lg:px-8 relative lg:border-r border-gray-200"
-              }`}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <PricingCard
+                title="Pro"
+                subtitle="Growing teams and agencies"
+                price="$300"
+                features={proFeatures}
+                buttonText="Get Started For Free"
+                buttonColor={activeTab === "pro" ? "primary" : "secondary"}
+                isFeatured={activeTab === "pro"}
+                showBestValue
+                onClick={() => setActiveTab("pro")}
+                containerClassName={`flex flex-col ${
+                  activeTab === "pro"
+                    ? getFeaturedClass()
+                    : "px-[32px] lg:px-8 relative "
+                }`}
+              />
+            </motion.div>
 
-            <PricingCard
-              title="Scale"
-              subtitle="Large organizations"
-              price="Custom"
-              features={scaleFeatures}
-              buttonText="Talk to Sales"
-              buttonColor={activeTab === "scale" ? "primary" : "sales"}
-              isFeatured={activeTab === "scale"}
-              onClick={() => setActiveTab("scale")}
-              containerClassName={`flex flex-col ${
-                activeTab === "scale"
-                  ? getFeaturedClass()
-                  : "px-4 lg:px-8 relative"
-              }`}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <PricingCard
+                title="Scale"
+                subtitle="Large organizations"
+                price="Custom"
+                features={scaleFeatures}
+                buttonText="Talk to Sales"
+                buttonColor={activeTab === "scale" ? "primary" : "sales"}
+                isFeatured={activeTab === "scale"}
+                onClick={() => setActiveTab("scale")}
+                containerClassName={`flex flex-col ${
+                  activeTab === "scale"
+                    ? getFeaturedClass()
+                    : "px-[32px] lg:px-8 relative"
+                }`}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

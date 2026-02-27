@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import { BsStarFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 import Navbar from "../Layout/Navbar";
 import Rings from "./Rings";
 import Reviews from "./Reviews";
@@ -31,33 +32,53 @@ const Hero = () => {
 
         <main className="flex flex-col items-center pt-16 lg:pt-20  text-center w-full">
           {/* Main Heading */}
-          <h1 className="text-[48px] sm:text-5xl lg:text-[70px] font-bold tracking-tight mb-6 leading-[1.1] lg:leading-[1.05] text-[#160041] max-w-4xl mx-auto">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-[48px] sm:text-5xl lg:text-[70px] font-bold tracking-tight mb-6 leading-[1.1] lg:leading-[1.05] text-[#160041] max-w-4xl mx-auto"
+          >
             <span className="italic font-garamond text-[#160041]">
               Create More.
             </span>
             <br className="block " />
             <span className="">Stress Less.</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtext */}
-          <p className="max-w-xl text-lg  text-[#46468A] mb-8 lg:mb-10 leading-relaxed font-medium px-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="max-w-xl text-lg  text-[#46468A] mb-8 lg:mb-10 leading-relaxed font-medium px-4"
+          >
             PostSyncer helps you manage all your social accounts, schedule
             content, and create AI videos in minutes.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons - Centered */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 font-geist">
-            <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-white rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 font-geist"
+          >
+            <button className="flex items-center gap-3 pl-[18px] pr-[8px] py-[11px] font-semibold text-[#160041] bg-white rounded-[39px] transition-all border border-transparent hover:border-gray-200 cursor-pointer">
               Join with Google{" "}
-              <span className="bg-[#F8F7F9] rounded-[36px] p-2 shadow-sm bg-[#16004108]">
+              <span className="bg-[#F8F7F9] rounded-[20px] p-[10px] shadow-sm bg-[#16004108]">
                 <FcGoogle className="text-lg" />
               </span>
             </button>
             <StartButton />
-          </div>
+          </motion.div>
 
           {/* Avatars & Social Proof */}
-          <div className="flex flex-row gap-[18px] mt-[32px] lg:mt-[33px] items-center justify-center ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="flex flex-row gap-[18px] mt-[32px] lg:mt-[33px] items-center justify-center "
+          >
             <div className="relative h-10 lg:h-12 w-35 grayscale-[0.0]">
               <Image
                 src="/avatars.png"
@@ -78,7 +99,7 @@ const Hero = () => {
                 Loved by 1500+ creators
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Animated Rings Section */}
           <Rings />

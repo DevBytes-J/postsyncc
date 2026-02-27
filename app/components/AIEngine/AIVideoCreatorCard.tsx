@@ -3,11 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { GrFormCheckmark } from "react-icons/gr";
+
 const AIVideoCreatorCard = () => {
   const [selectedAvatar, setSelectedAvatar] = useState(0);
 
   return (
-    <div className="bg-[#FBFBFB]  p-4 md:p-6 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 overflow-hidden relative rounded-[32px]">
+    <div className="bg-[#FBFBFB]  lg:p-6 py-4 pl-4 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 overflow-hidden relative rounded-[32px]">
       <div className="mb-6 flex-1 flex flex-col justify-center relative -mr-4 md:-mr-6">
         {/* Fade Out Overlay */}
         <div className="absolute right-0 top-0 bottom-0 w-14 md:w-12 bg-linear-to-l from-[#FBFBFB] via-[#FBFBFB]/90 to-transparent z-10 pointer-events-none"></div>
@@ -62,7 +64,7 @@ const AIVideoCreatorCard = () => {
             </div>
           </div>
           {/* Replace these paths with actual avatar paths when ready */}
-          <div className="grid grid-cols-8 gap-x-[20px] gap-y-1.5 mb-1">
+          <div className="grid grid-cols-8 gap-x-[20px] gap-y-3 mb-1">
             {[
               "a1.jpg",
               "a1i.jpg",
@@ -86,16 +88,16 @@ const AIVideoCreatorCard = () => {
                 onClick={() => setSelectedAvatar(i)}
                 className={`relative w-8 h-8 shrink-0 cursor-pointer ${
                   selectedAvatar === i
-                    ? "ring-1 ring-[#6E43FC] ring-offset-1 rounded-[4px]"
+                    ? "ring-2 ring-[#4F46E5] ring-offset-3 rounded-[7px] "
                     : ""
                 }`}
               >
                 {selectedAvatar === i && (
-                  <div className="absolute -top-1.5 -right-1.5 w-2.5 rounded-full h-2.5 bg-[#6E43FC] flex items-center justify-center text-white text-[6px] z-20 border border-white">
-                    ✓
+                  <div className="absolute -top-3 -right-3 w-4 rounded-full h-4 bg-[#4F46E5] flex items-center justify-center text-white text-[10px] z-20 border border-white">
+                    <GrFormCheckmark />
                   </div>
                 )}
-                <div className="w-full h-full relative rounded-[8px] overflow-hidden">
+                <div className="w-full h-full relative rounded-[7px] overflow-hidden">
                   <Image
                     src={`/${imgName}`}
                     alt={`Avatar ${i + 1}`}

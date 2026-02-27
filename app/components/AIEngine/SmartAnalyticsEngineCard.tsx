@@ -3,7 +3,7 @@ import { RiFireLine } from "react-icons/ri";
 
 const SmartAnalyticsEngineCard = () => {
   return (
-    <div className="bg-[#FBFBFB] rounded-[32px] p-4 md:p-6 flex flex-col h-full">
+    <div className="bg-[#FBFBFB] rounded-[32px] p-6 flex flex-col h-full">
       <div className="bg-white rounded-3xl p-4 shadow-sm flex flex-col flex-1 mb-6 cursor-pointer">
         <div className="flex justify-between items-start mb-6">
           <div>
@@ -30,7 +30,7 @@ const SmartAnalyticsEngineCard = () => {
             <span className="text-[10px] text-[#737A87] font-roboto">Jul</span>
           </div>
           <Image
-            src="/feature.png"
+            src="/feature2.png"
             alt="Heatmap"
             width={400}
             height={100}

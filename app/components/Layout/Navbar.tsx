@@ -22,13 +22,13 @@ const Navbar = () => {
   const navLinks = [
     { name: "Features", href: "#features" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Blog", href: "#blog" },
+    { name: "Free Tools", href: "#tools" },
   ];
 
   return (
     <>
-      <nav className="flex items-center justify-between px-[18px] lg:px-6 py-[12px] w-full max-w-6xl bg-white/80 backdrop-blur-md rounded-full shadow-lg shadow-gray-200/50 border border-white/50 transition-all duration-300 mx-[5px] relative z-100">
+      <nav className="flex items-center justify-between px-[18px] lg:pl-[18px] lg:pr-[12px] py-[12px] w-full max-w-6xl bg-white/80 backdrop-blur-md rounded-[24px] shadow-lg shadow-gray-200/50 border border-white/50 transition-all duration-300 mx-[5px] relative z-100">
         {/* Logo Section */}
         <div className="flex items-center gap-[2px] justify-center cursor-pointer">
           <div className=" ">
@@ -55,16 +55,16 @@ const Navbar = () => {
 
         {/* Right Side Buttons - Desktop (Visible above 1300px) */}
         <div className="hidden min-[1301px]:flex items-center gap-3 font-geist">
-          <button className="flex items-center gap-3 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-full transition-all border border-transparent hover:border-gray-200 cursor-pointer">
+          <button className="flex items-center gap-3 pl-[16px] p-[4px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-[39px] transition-all border border-transparent hover:border-gray-200 cursor-pointer">
             Join with Google{" "}
-            <span className="bg-white rounded-[36px] p-2 shadow-sm">
+            <span className="bg-white rounded-[20px] p-[10px] shadow-sm bg-[#16004108]">
               <FcGoogle className="text-lg" />
             </span>
           </button>
-          <button className="flex items-center gap-2 pl-[16px] pr-[4px] py-[11px] text-sm font-semibold text-white bg-[#6E43FC] rounded-full transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group cursor-pointer">
+          <button className="flex items-center gap-2 pl-[16px] p-[4px] text-sm font-semibold text-white bg-[#6E43FC] rounded-[39px] transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group cursor-pointer">
             Start For Free
-            <div className="bg-[#ffffff] text-[#6E43FC] rounded-[36px] p-2 group-hover:translate-x-0.5 transition-transform">
-              <HiArrowRight size={12} />
+            <div className="bg-[#ffffff] text-[#6E43FC] rounded-[20px] p-[10px] group-hover:translate-x-0.5 transition-transform">
+              <HiArrowRight size={14} />
             </div>
           </button>
         </div>

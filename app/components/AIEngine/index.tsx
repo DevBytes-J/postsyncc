@@ -4,15 +4,35 @@ import SmartAnalyticsEngineCard from "./SmartAnalyticsEngineCard";
 import AIContentStudioCard from "./AIContentStudioCard";
 import AIVideoCreatorCard from "./AIVideoCreatorCard";
 import SocialAccountsRow from "../ui/SocialAccountsRow";
-import Curve from "../ui/Curve";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const AIEngine = () => {
   return (
     <section className="w-full bg-white pb-[96px] overflow-hidden">
-      <Curve />
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden rounded-[16px]"
+        />
+        {/* desktop */}
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
       <div className=" px-6 lg:px-[96px]">
-        <div className="flex justify-center mb-3 -mt-[30px] z-70 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-3 -mt-[30px] z-70 relative"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D]">
             <Image
               src="/logo.png"
@@ -23,9 +43,15 @@ const AIEngine = () => {
             />
             Smarter. Faster. Easier.
           </div>
-        </div>
+        </motion.div>
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-[32px] lg:text-[56px] font-bold text-[#160041] leading-tight font-britti tracking-tight">
             The AI Engine Behind
             <br />
@@ -37,22 +63,47 @@ const AIEngine = () => {
             AI, analytics, and automation working together to help you grow your
             reach with less effort.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3 Cards Flex Layout */}
         <div className="flex flex-col lg:flex-row gap-4 mb-8">
-          <div className="w-full lg:w-[30%]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full lg:w-[30%]"
+          >
             <SmartAnalyticsEngineCard />
-          </div>
-          <div className="w-full lg:w-[45%]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="w-full lg:w-[45%]"
+          >
             <AIContentStudioCard />
-          </div>
-          <div className="w-full lg:w-[27.5%]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="w-full lg:w-[27.5%]"
+          >
             <AIVideoCreatorCard />
-          </div>
+          </motion.div>
         </div>
 
-        <SocialAccountsRow />
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <SocialAccountsRow />
+        </motion.div>
       </div>
     </section>
   );

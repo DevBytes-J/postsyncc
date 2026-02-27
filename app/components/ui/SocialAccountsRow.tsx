@@ -39,7 +39,7 @@ const SocialAccountsRow = () => {
         {/* <span className="border-r border-[#1600410D] ml-6 h-full "></span> */}
       </div>
 
-      <div className="flex flex-nowrap items-start lg:items-center justify-left lg:justify-center gap-3 lg:gap-4 flex-1 w-full p-2 py-4 rounded-xl overflow-hidden">
+      <div className="flex flex-nowrap items-start lg:items-center justify-left lg:justify-center gap-2 lg:gap-4 flex-1 w-full p-2 py-4 rounded-xl overflow-hidden">
         {[
           {
             icon: <FaPinterest className="text-[#E60023] w-5 h-5" />,
@@ -94,7 +94,7 @@ const SocialAccountsRow = () => {
         ].map((social) => (
           <div
             key={social.id}
-            className="w-[55px] h-[55px] lg:w-[60px] lg:h-[60px] shrink-0 rounded-[18px] bg-white shadow-[0px_16px_24px_-8px_#33008029] flex items-center justify-center cursor-pointer hover:scale-110 transition-transform hover:shadow-md border border-[#1600410D]"
+            className="w-[55px] h-[55px] lg:w-[60px] lg:h-[60px] shrink-0 rounded-[18px] bg-white shadow-[0px_8px_16px_-4px_rgba(51,0,128,0.08)] flex items-center justify-center cursor-pointer hover:scale-110 transition-transform hover:shadow-md border border-[#3300800F]"
           >
             {social.icon}
           </div>

@@ -6,14 +6,14 @@ import Curve from "../ui/Curve";
 
 const Reviews = () => {
   return (
-    <div className="w-full overflow-hidden mt-[-100px] lg:mt-[-250px] relative z-60 border-t-5 border-[#ffffff]">
-      <div className="rounded-[16px] bg-[#FBFBFB] overflow-hidden">
+    <div className="w-full overflow-hidden mx-[8px] mt-[-120px] lg:mt-[-250px] relative z-60 lg:border-t-5 lg:border-[#ffffff]">
+      <div className="rounded-[16px] bg-[#FBFBFB] overflow-hidden mx-[8px]">
         <div className="flex gap-6 animate-marquee w-max">
           {/* Review Cards (Duplicated for seamless loop) */}
           {[...Array(2)].map((_, groupIndex) => (
             <div key={groupIndex} className="flex gap-6">
               {/* Review 1 */}
-              <div className="w-[300px] lg:w-[350px] bg-[#FBFBFB] backdrop-blur-sm p-6 text-left shrink-0">
+              <div className="w-[300px] lg:w-[350px] bg-[#FBFBFB] backdrop-blur-sm p-6 text-left shrink-0 mx-[8px]">
                 <div className="flex text-[#FFC367] mb-3 gap-1">
                   {[...Array(5)].map((_, i) => (
                     <BsStarFill key={i} size={14} fill="currentColor" />
@@ -112,7 +112,20 @@ const Reviews = () => {
       </div>
 
       {/* Bottom curve image */}
-      <Curve />
+      <div className="relative h-[100px] z-50 mx-[2px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden"
+        />
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
     </div>
   );
 };

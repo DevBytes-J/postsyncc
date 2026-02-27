@@ -11,8 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-4">
           {/* Logo & Info */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <div className="flex items-center gap-2 font-bold text-[#160041] text-[20px] mb-4 cursor-pointer">
-              <div className="w-6 h-6 bg-[#160041] rounded-[6px] flex items-center justify-center text-white relative">
+            <div className="flex items-center gap-2 font-medium text-[#00005E] text-[26.5px] mb-4 cursor-pointer font-palanquin">
+              <div className="w-6 h-6 bg-[#00005E] rounded-[6px] flex items-center justify-center text-white relative">
                 <Image
                   src="/logo.png"
                   alt="PostSyncer Logo"
@@ -22,10 +22,10 @@ const Footer = () => {
               </div>
               PostSyncer
             </div>
-            <p className="text-[#667085] text-[13px] font-geist leading-relaxed mb-6 max-w-[250px]">
+            <p className="text-[#46468A] text-[14px] font-geist leading-relaxed mb-6">
               Plan, publish, and analyze across every platform.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-4">
               <Link
                 href="#"
                 className="w-8 h-8 rounded-[8px] bg-[#00005E0A] flex items-center justify-center text-[#6E43FC] hover:bg-[#00005E0A] transition-colors"

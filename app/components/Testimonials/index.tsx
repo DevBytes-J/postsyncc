@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { BsStarFill } from "react-icons/bs";
 import Curve from "../ui/Curve";
+import { motion } from "framer-motion";
 
 const reviews = [
   {
@@ -49,9 +50,29 @@ const reviews = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="w-full bg-white">
-      <Curve />
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden"
+        />
+        {/* desktop */}
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
       <div className="lg:px-[96px] pb-[96px] p-6">
-        <div className="flex justify-center mb-[] -mt-[50px] z-70 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-[] -mt-[50px] z-70 relative"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold cursor-pointer">
             <Image
               src="/logo.png"
@@ -62,32 +83,46 @@ const Testimonials = () => {
             />
             Proof it Works
           </div>
-        </div>
-        <div className="text-center mb-10">
-          <h2 className="text-[32px] lg:text-[56px] font-bold text-[#160041] leading-tight font-britti tracking-tight mb-4">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center mb-10"
+        >
+          <h2 className="text-[40px] lg:text-[56px] font-bold text-[#160041] leading-tight font-britti tracking-tight mb-4">
             Don't Just Take our Word
             <br className="hidden lg:block" /> for It
           </h2>
-          <div className="flex flex-col items-center justify-center text-[#667085] text-[15px] font-geist">
-            <p>Join thousands of creators and teams scaling smarter</p>
-            <div className="flex items-center gap-1">
-              <span>with</span>
-              <div className="flex items-center gap-1 font-bold text-[#160041]">
-                <div className=" p-0.5 w-4 h-4 flex items-center justify-center relative">
+          <div className="flex flex-col items-center justify-center text-[#667085] text-[14px] md:text-[15px] font-geist text-center leading-relaxed">
+            <p className="whitespace-nowrap">
+              Join thousands of creators and teams scaling
+            </p>
+            <div className="flex items-center justify-center gap-1">
+              <span className="whitespace-nowrap">smarter with</span>
+              <div className="flex items-center gap-1 font-medium text-[#00005E] whitespace-nowrap text-[15.8px]">
+                <span className="p-0.5 w-4 h-4 flex items-center justify-center relative">
                   <Image
                     src="/logo.png"
                     alt="PostSyncer Logo"
                     fill
                     className="object-contain"
                   />
-                </div>
+                </span>
                 PostSyncer
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* Avatar stack */}
-        <div className="flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center"
+        >
           <div className="flex relative">
             <Image
               src="/testimonial.png"
@@ -97,11 +132,15 @@ const Testimonials = () => {
               height={250}
             />
           </div>
-        </div>
+        </motion.div>
         {/* Masonry Layout for Reviews */}
-        <div className="columns-1 lg:columns-3 gap-6 pt-[56px]">
+        <div className="columns-1 lg:columns-3 gap-6 lg:pt-[56px] pt-[40px]">
           {reviews.map((review, i) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               key={i}
               className="break-inside-avoid mb-6 rounded-2xl overflow-hidden bg-[#FAFAFA] "
             >
@@ -140,7 +179,7 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

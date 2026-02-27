@@ -2,16 +2,36 @@
 
 import { HiArrowRight } from "react-icons/hi";
 import Image from "next/image";
-import Curve from "../ui/Curve";
 import { GrLineChart } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 const SocialPosting = () => {
   return (
     <section className="w-full bg-white pb-[96px] mt-[96px] overflow-hidden">
-      <Curve />
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden"
+        />
+        {/* desktop */}
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
       <div className="mx-auto px-6 lg:px-[96px]">
         {/* Section Header */}
-        <div className="text-center mb-16 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 relative"
+        >
           <div className="flex justify-center mb-3 -mt-[20px] z-70 relative">
             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D]">
               <Image
@@ -24,7 +44,7 @@ const SocialPosting = () => {
               What You’ll Love
             </div>
           </div>
-          <h2 className="text-[32px] lg:text-[56px] font-bold text-[#160041] mt-3 leading-tight font-britti tracking-tight">
+          <h2 className="text-[40px] lg:text-[56px] font-bold text-[#160041] mt-3 leading-tight font-britti tracking-tight">
             Social Media Superpowers,
             <br />
             <span className="text-[#6E43FC] italic font-garamond">
@@ -39,12 +59,18 @@ const SocialPosting = () => {
             Save time, collaborate better, and grow faster with
             PostSyncer&apos;s smart automation and AI-driven insights.
           </p>
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Card: One Click Everywhere */}
-          <div className="bg-[#FBFBFB] rounded-3xl px-4 py-6 lg:pb-0 lg:px-6 lg:pt-6 relative group font-geist flex-1 w-full">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7 }}
+            className="bg-[#FBFBFB] rounded-3xl px-4 py-6 lg:pb-0 lg:px-6 lg:pt-6 relative group font-geist flex-1 w-full"
+          >
             <h3 className="text-[18px] font-medium text-[#160041] mb-2 ">
               One Click. Everywhere.
             </h3>
@@ -111,12 +137,18 @@ const SocialPosting = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Two Stacked Cards */}
           <div className="flex flex-col gap-4 flex-1 w-full">
             {/* Top Right: Team Members */}
-            <div className="bg-[#FBFBFB] rounded-3xl p-4 lg:p-6">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="bg-[#FBFBFB] rounded-3xl p-4 lg:p-6"
+            >
               <h3 className="text-lg font-medium text-[#160041] mb-2 font-geist">
                 Built for Teams, Loved by Freelancers
               </h3>
@@ -130,9 +162,9 @@ const SocialPosting = () => {
                   Invite Team Members
                 </h4>
                 <div className="space-y-3">
-                  <div className="h-2 w-full bg-[#66708514] rounded-full"></div>
-                  <div className="h-2 w-full bg-[#66708514] rounded-full"></div>
-                  <div className="h-2 w-[50%] bg-[#66708514] rounded-full"></div>
+                  <div className="h-[10px] lg:w-full w-[97%] bg-[#66708514] rounded-full"></div>
+                  <div className="h-[10px] lg:w-full w-[97%] bg-[#66708514] rounded-full"></div>
+                  <div className="h-[10px] lg:w-[50%] w-full bg-[#66708514] rounded-full"></div>
                   <div className="flex flex-col lg:flex-row gap-2 mt-4">
                     <input
                       type="text"
@@ -145,10 +177,16 @@ const SocialPosting = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Bottom Right: Analytics */}
-            <div className="bg-[#FBFBFB] rounded-3xl p-4 pb-0 lg:px-6 lg:py-6 ">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="bg-[#FBFBFB] rounded-3xl p-4 pb-0 lg:px-6 lg:py-6 "
+            >
               <h3 className="text-lg font-medium text-[#160041] mb-2 font-roboto">
                 Know What Works. Double Down on It.
               </h3>
@@ -244,7 +282,7 @@ const SocialPosting = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

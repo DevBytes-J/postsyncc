@@ -3,14 +3,35 @@
 import Image from "next/image";
 import Curve from "../ui/Curve";
 import StartButton from "../ui/StartButton";
+import { motion } from "framer-motion";
 
 const FeatureGrid = () => {
   return (
     <section id="features" className="w-full bg-white pb-[96px]">
-      <Curve />
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden rounded-[16px]"
+        />
+        {/* desktop */}
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
       <div className="lg:px-[96px] px-6">
         {/* Header */}
-        <div className="text-center mb-20 ">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20 "
+        >
           {" "}
           <div className="flex justify-center mb-3 -mt-[30px] z-70 relative">
             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-[#F0E7FF] text-[#160041] text-sm font-semibold shadow-[0px_4px_12px_#3300800D] cursor-pointer">
@@ -24,7 +45,7 @@ const FeatureGrid = () => {
               Power Meets Simplicity
             </div>
           </div>
-          <h2 className="text-[32px] lg:text-[56px] font-semibold text-[#160041] leading-none lg:leading-[1.1] lg:mb-[64px] mb-[16px] lg:mt-[18px] font-britti tracking-tight w-full">
+          <h2 className="text-[40px] lg:text-[56px] font-semibold text-[#160041] leading-none lg:leading-[1.1] lg:mb-[64px] mb-[16px] lg:mt-[18px] font-britti tracking-tight w-full">
             Smarter Tool.
             <br />
             Simpler Workflow.
@@ -37,12 +58,17 @@ const FeatureGrid = () => {
             Powerful tools designed to simplify your workflow, boost engagement,
             and keep your content engine running smoothly.
           </p>
-        </div>
+        </motion.div>
 
         {/* Grid Container */}
         <div className="flex flex-col gap-4">
           {/* Feature 1: Plan & Schedule */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7 }}
+          >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
@@ -109,10 +135,15 @@ const FeatureGrid = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Feature 2: Collaborate & Manage */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7 }}
+          >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
@@ -180,10 +211,15 @@ const FeatureGrid = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Feature 3: Create & Store */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7 }}
+          >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
               <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
@@ -251,7 +287,7 @@ const FeatureGrid = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
