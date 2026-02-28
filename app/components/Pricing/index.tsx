@@ -50,8 +50,6 @@ const Pricing = () => {
     "pro",
   );
 
-  // Featured cards now render their own frosted container internally,
-  // so containerClassName only needs to handle grid positioning.
   const getFeaturedClass = () => "relative lg:-mt-12 lg:-mb-12 z-20 shrink-0 ";
 
   return (
@@ -127,7 +125,7 @@ const Pricing = () => {
           </motion.div>
 
           {/* Pricing Cards Container */}
-          <div className="mx-0 lg:mx-[96px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-2 lg:p-12 w-auto grid py-6 grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 relative items-center">
+          <div className="mx-0 lg:mx-[70px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-2 lg:p-12 w-auto grid py-6 min-[1301px]grid-cols-1 lg:grid-cols-3 min-[1301px]gap-8 lg:gap-0 relative items-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
