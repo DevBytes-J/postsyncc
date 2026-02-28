@@ -55,28 +55,28 @@ const Pricing = () => {
   return (
     <section id="pricing" className="pb-32 overflow-hidden relative ">
       <div className="absolute inset-0 bg-[#FBFBFB] mix-blend-multiply -z-10 lg:block hidden" />
-            <div className="relative h-[120px] z-50 mx-[16px] ">
-              <Image
-                src="/under2.png"
-                alt="Bottom curve mobile"
-                fill
-                className="object-fill md:hidden rounded-[16px]"
-              />
-              {/* desktop */}
-              <Image
-                src="/under.png"
-                alt="Bottom curve desktop"
-                fill
-                className="object-fill hidden md:block"
-              />
-            </div>
+      <div className="relative h-[120px] z-50 mx-[16px] ">
+        <Image
+          src="/under2.png"
+          alt="Bottom curve mobile"
+          fill
+          className="object-fill md:hidden rounded-[16px]"
+        />
+        {/* desktop */}
+        <Image
+          src="/under.png"
+          alt="Bottom curve desktop"
+          fill
+          className="object-fill hidden md:block"
+        />
+      </div>
       <div className="mx-[8px]">
         <img
           src="/bg-img.png"
           alt="Background Pattern"
           className="absolute bottom-0 inset-x-0 w-full object-cover -z-20 pointer-events-none rotate-180 lg:block hidden opacity-60"
         />
-        <div className="relative w-full max-w-[1440px] px-4">
+        <div className="relative w-full max-w-[1440px] px-4 mx-auto">
           {/* Isolated background blend layer */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ const Pricing = () => {
           </motion.div>
 
           {/* Pricing Cards Container */}
-          <div className="mx-0 lg:mx-[70px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-2 lg:p-12 w-auto grid py-6 min-[1301px]grid-cols-1 lg:grid-cols-3 min-[1301px]gap-8 lg:gap-0 relative items-center">
+          <div className="mx-0 lg:mx-[70px] bg-[#FFFFFF] rounded-[32px] border border-[#F0E7FF] lg:border-0 p-2 lg:p-12 w-auto grid py-6 min-[1301px]:grid-cols-1 lg:grid-cols-3 min-[1301px]:gap-8 lg:gap-0 relative items-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

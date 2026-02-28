@@ -28,9 +28,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex mt-4 items-center justify-between px-[18px] lg:pl-[18px] lg:pr-[12px] py-[12px] w-full max-w-6xl bg-white/80 backdrop-blur-md rounded-[24px] shadow-lg shadow-gray-200/50 border border-white/50 transition-all duration-300 z-100">
-        {/* Logo Section */}
-        <div className="flex items-center gap-[2px] justify-center cursor-pointer">
+      <nav className="flex mt-4 items-center justify-between px-[18px] lg:pl-[18px] lg:pr-[12px] py-[12px] w-full max-w-[1440px] bg-white/80 backdrop-blur-md rounded-[24px] shadow-lg shadow-gray-200/50 border border-white/50 transition-all duration-300 z-100">
+        <div className="flex-1 flex items-center gap-[2px] cursor-pointer">
           <div className=" ">
             <Image src="/logo.png" alt="Logo" width={24} height={24} />
           </div>
@@ -40,7 +39,7 @@ const Navbar = () => {
         </div>
 
         {/* Centered Navigation Links - Desktop (Visible above 1300px) */}
-        <div className="hidden min-[1301px]:flex items-center gap-8 text-[14px] font-medium text-[#667085] font-geist">
+        <div className="hidden min-[1301px]:flex flex-1 justify-center items-center gap-8 text-[14px] font-medium text-[#667085] font-geist">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -53,30 +52,32 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right Side Buttons - Desktop (Visible above 1300px) */}
-        <div className="hidden min-[1301px]:flex items-center gap-3 font-geist">
-          <button className="flex items-center gap-3 pl-[16px] p-[4px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-[39px] transition-all border border-transparent hover:border-gray-200 cursor-pointer">
-            Join with Google{" "}
-            <span className="bg-white rounded-[20px] p-[10px] shadow-sm bg-[#16004108]">
-              <FcGoogle className="text-lg" />
-            </span>
-          </button>
-          <button className="flex items-center gap-2 pl-[16px] p-[4px] text-sm font-semibold text-white bg-[#6E43FC] rounded-[39px] transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group cursor-pointer">
-            Start For Free
-            <div className="bg-[#ffffff] text-[#6E43FC] rounded-[20px] p-[10px] group-hover:translate-x-0.5 transition-transform">
-              <HiArrowRight size={14} />
-            </div>
-          </button>
-        </div>
+        {/* Right Side Buttons & Mobile Menu - Desktop (Visible above 1300px) */}
+        <div className="flex-1 flex justify-end items-center gap-3 font-geist">
+          <div className="hidden min-[1301px]:flex items-center gap-3">
+            <button className="flex items-center gap-3 pl-[16px] p-[4px] text-sm font-semibold text-[#160041] bg-[#F8F7F9] rounded-[39px] transition-all border border-transparent hover:border-gray-200 cursor-pointer">
+              Join with Google{" "}
+              <span className="bg-white rounded-[20px] p-[10px] shadow-sm bg-[#16004108]">
+                <FcGoogle className="text-lg" />
+              </span>
+            </button>
+            <button className="flex items-center gap-2 pl-[16px] p-[4px] text-sm font-semibold text-white bg-[#6E43FC] rounded-[39px] transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-0.5 group cursor-pointer">
+              Start For Free
+              <div className="bg-[#ffffff] text-[#6E43FC] rounded-[20px] p-[10px] group-hover:translate-x-0.5 transition-transform">
+                <HiArrowRight size={14} />
+              </div>
+            </button>
+          </div>
 
-        {/* Mobile Menu Button (Visible at 1300px and below) */}
-        <div className="min-[1301px]:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(true)}
-            className="p-2 text-gray-700 hover:text-[#4F46E5] transition-colors cursor-pointer"
-          >
-            <CgMenuLeftAlt size={28} color="#6E43FC" />
-          </button>
+          {/* Mobile Menu Button (Visible at 1300px and below) */}
+          <div className="min-[1301px]:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-2 text-gray-700 hover:text-[#4F46E5] transition-colors cursor-pointer"
+            >
+              <CgMenuLeftAlt size={28} color="#6E43FC" />
+            </button>
+          </div>
         </div>
       </nav>
 

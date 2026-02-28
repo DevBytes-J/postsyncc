@@ -25,7 +25,7 @@ const AIEngine = () => {
           className="object-fill hidden md:block"
         />
       </div>
-      <div className=" px-6 lg:px-[96px]">
+      <div className=" px-6 lg:px-[96px] max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

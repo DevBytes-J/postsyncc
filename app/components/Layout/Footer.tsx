@@ -7,7 +7,7 @@ import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className=" relative bg-white overflow-hidden pt-16 pb-6">
-      <div className=" px-6 lg:px-[96px] w-full max-w-[1440px] relative z-10">
+      <div className=" px-6 lg:px-[96px] w-full max-w-[1440px] relative z-10 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-4">
           {/* Logo & Info */}
           <div className="lg:col-span-4 flex flex-col items-start">
