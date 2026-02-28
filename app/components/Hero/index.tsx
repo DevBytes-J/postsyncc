@@ -25,7 +25,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="fixed top-3 left-0 right-0 z-100 px-6 flex justify-center pointer-events-none transition-all duration-300">
+      <div className="fixed top-3 left-0 right-0 z-100 px-6 lg:px-[96px] flex justify-center pointer-events-none transition-all duration-300">
         <div className="w-full max-w-[1440px] pointer-events-auto">
           <Navbar />
         </div>
