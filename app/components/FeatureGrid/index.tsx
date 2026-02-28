@@ -71,7 +71,7 @@ const FeatureGrid = () => {
           >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
-              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 lg:items-center items-start">
                 <div className="lg:w-[40%]">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-3 lg:mt-[93px] mt-0 cursor-pointer">
                     <Image
@@ -92,7 +92,7 @@ const FeatureGrid = () => {
                   <StartButton />
                 </div>
                 {/* Image Side - Calendar Mockup */}
-                <div className="lg:w-[60%] w-full flex justify-end overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] lg:pt-[32px] pt-0">
+                <div className="lg:w-[60%] w-full flex lg:justify-end justify-start overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] lg:pt-[32px] pt-0">
                   <Image
                     src="/plan-schedule.png"
                     alt="Plan & Schedule"
@@ -100,7 +100,7 @@ const FeatureGrid = () => {
                     height={300}
                     quality={100}
                     unoptimized
-                    className="object-right object-contain w-[120%] lg:w-full ml-auto translate-x-4 lg:translate-x-12"
+                    className="object-right object-contain w-[120%] lg:w-full lg:ml-auto ml-0 lg:translate-x-12 translate-x-0"
                   />
                 </div>
               </div>
@@ -146,7 +146,7 @@ const FeatureGrid = () => {
           >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
-              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 lg:items-center items-start">
                 <div className="lg:w-[40%]">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px] cursor-pointer">
                     <Image
@@ -167,7 +167,7 @@ const FeatureGrid = () => {
                   <StartButton />
                 </div>
                 {/* Image Side - Team Mockup */}
-                <div className="lg:w-[60%] w-full flex justify-end overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] pt-0 lg:pt-[32px]">
+                <div className="lg:w-[60%] w-full flex lg:justify-end justify-start overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] pt-0 lg:pt-[32px]">
                   <Image
                     src="/collaborate-manage.png"
                     alt="Collaborate & Manage"
@@ -175,7 +175,7 @@ const FeatureGrid = () => {
                     height={500}
                     quality={100}
                     unoptimized
-                    className="object-right object-contain w-[120%] lg:w-full ml-auto translate-x-4 lg:translate-x-12"
+                    className="object-right object-contain w-[120%] lg:w-full lg:ml-auto ml-0 lg:translate-x-12 translate-x-0"
                   />
                 </div>
               </div>
@@ -222,7 +222,7 @@ const FeatureGrid = () => {
           >
             {/* Top Full Width Card */}
             <div className="bg-[#FBFBFB] rounded-[24px] pt-4 pl-4 lg:pt-6 lg:pl-6 mb-4">
-              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 items-center">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 lg:items-center items-start">
                 <div className="lg:w-[40%]">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-3 mb-6 mt-0 lg:mt-[93px] cursor-pointer">
                     <Image
@@ -243,7 +243,7 @@ const FeatureGrid = () => {
                   <StartButton />
                 </div>
                 {/* Image Side - Media Mockup */}
-                <div className="lg:w-[60%] w-full flex justify-end overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] pt-0 lg:pt-[32px]">
+                <div className="lg:w-[60%] w-full flex lg:justify-end justify-start overflow-hidden mask-[linear-gradient(to_bottom,black_60%,transparent_100%)] pt-0 lg:pt-[32px]">
                   <Image
                     src="/create-store.png"
                     alt="Create & Store"
@@ -251,7 +251,7 @@ const FeatureGrid = () => {
                     height={500}
                     quality={100}
                     unoptimized
-                    className="object-right object-contain w-[120%] lg:w-full ml-auto translate-x-4 lg:translate-x-12"
+                    className="object-right object-contain w-[120%] lg:w-full lg:ml-auto ml-0 lg:translate-x-12 translate-x-0"
                   />
                 </div>
               </div>
