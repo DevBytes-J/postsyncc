@@ -76,7 +76,7 @@ const Pricing = () => {
           alt="Background Pattern"
           className="absolute bottom-0 inset-x-0 w-full object-cover -z-20 pointer-events-none rotate-180 lg:block hidden opacity-60"
         />
-        <div className="relative w-full max-w-[1440px] px-4 mx-auto">
+        <div className="relative w-full max-w-[1440px] px-6 lg:px-[96px] mx-auto">
           {/* Isolated background blend layer */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

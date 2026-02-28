@@ -23,7 +23,7 @@ const CTA = () => {
         }}
       />
 
-      <div className="relative z-10 px-4 lg:px-[96px] text-center w-full max-w-[1440px] mx-auto">
+      <div className="relative z-10 px-6 lg:px-[96px] text-center w-full max-w-[1440px] mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
