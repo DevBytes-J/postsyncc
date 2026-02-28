@@ -26,12 +26,12 @@ const Hero = () => {
       />
 
       <div className="fixed top-3 left-0 right-0 z-100 px-6 flex justify-center pointer-events-none transition-all duration-300">
-        <div className="w-full max-w-6xl pointer-events-auto">
+        <div className="w-full max-w-[1440px] pointer-events-auto">
           <Navbar />
         </div>
       </div>
 
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto">
         <main className="flex flex-col items-center pt-32 lg:pt-40 text-center w-full">
           {/* Main Heading */}
           <motion.h1

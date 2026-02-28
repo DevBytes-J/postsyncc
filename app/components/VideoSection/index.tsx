@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const VideoSection = () => {
   return (
     <section className="w-full -mt-[20px] relative z-70">
-      <div className="lg:px-[96px] px-6 text-center">
+      <div className="lg:px-[96px] px-6 text-center max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

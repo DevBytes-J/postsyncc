@@ -23,7 +23,7 @@ const FeatureGrid = () => {
           className="object-fill hidden md:block"
         />
       </div>
-      <div className="lg:px-[96px] px-6">
+      <div className="lg:px-[96px] px-6 max-w-[1440px] mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

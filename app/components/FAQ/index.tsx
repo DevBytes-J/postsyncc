@@ -119,10 +119,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section
-      id="faq"
-      className=" bg-white pb-32 lg:pt-[96px] overflow-hidden"
-    >
+    <section id="faq" className=" bg-white pb-32 lg:pt-[96px] overflow-hidden">
       <div className="relative h-[120px] z-50 mx-[16px] ">
         <Image
           src="/under2.png"
@@ -131,7 +128,7 @@ const FAQ = () => {
           className="object-fill md:hidden rounded-[16px]"
         />
       </div>
-      <div className=" px-6 lg:px-[96px] -mt-[25px] z-70 relative">
+      <div className=" px-6 lg:px-[96px] -mt-[25px] z-70 relative max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,15 +136,15 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-2 justify-center  text-[#00005E] text-sm font-medium font-geist"
         >
-           <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white text-[#160041] text-sm font-semibold ">
-          <Image
-            src="/logo.png"
-            alt="Badge"
-            width={20}
-            height={20}
-            className="object-contain"
-          />
-          Got Questions?
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white text-[#160041] text-sm font-semibold ">
+            <Image
+              src="/logo.png"
+              alt="Badge"
+              width={20}
+              height={20}
+              className="object-contain"
+            />
+            Got Questions?
           </div>
         </motion.div>
 

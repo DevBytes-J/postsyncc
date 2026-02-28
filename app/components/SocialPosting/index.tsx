@@ -23,7 +23,7 @@ const SocialPosting = () => {
           className="object-fill hidden md:block"
         />
       </div>
-      <div className="mx-auto px-6 lg:px-[96px]">
+      <div className="mx-auto px-6 lg:px-[96px] max-w-[1440px]">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,11 +51,11 @@ const SocialPosting = () => {
               All in One Place.
             </span>
           </h2>
-          <p className="text-[#667085] text-[14px] font-geist mx-auto mt-4 text-center w-full block lg:hidden">
+          <p className="text-[#667085] text-[14px] font-geist mx-auto mt-4 text-center max-w-[280px] block lg:hidden">
             A single workspace that connects your content, your team, and your
             schedule.
           </p>
-          <p className="text-[#667085] text-[14px] font-geist mx-auto mt-4 text-center w-full hidden lg:block">
+          <p className="text-[#667085] text-[14px] font-geist mx-auto mt-4 text-center max-w-[480px] hidden lg:block">
             Save time, collaborate better, and grow faster with
             PostSyncer&apos;s smart automation and AI-driven insights.
           </p>
@@ -123,11 +123,11 @@ const SocialPosting = () => {
 
               {/* Schedule Bar */}
               <div className="flex flex-col lg:flex-row items-center justify-between mt-8 pt-4 gap-4 lg:gap-0">
-                <span className=" text-[11px] lg:text-xs font-medium text-[#160041] bg-[#FBFBFB] p-4 rounded-[12px] font-roboto border border-[#16004108] w-full lg:w-auto text-center lg:text-left break-words whitespace-normal cursor-pointer">
+                <span className=" text-[11px] lg:text-xs font-medium text-[#160041] bg-[#FBFBFB] p-4 rounded-[12px] font-roboto border border-[#16004108] w-full lg:w-auto text-center lg:text-left wrap-break-word cursor-pointer">
                   Schedule for Today at 7:00 PM
                 </span>
 
-                <button className="lg:flex hidden bg-[#FF6D00] text-white font-semibold rounded-full flex items-center gap-1 shadow-md hover:scale-105 transition-transform pr-[9px] w-full lg:w-auto justify-center lg:justify-start cursor-pointer">
+                <button className="hidden lg:flex bg-[#FF6D00] text-white font-semibold rounded-full items-center gap-1 shadow-md hover:scale-105 transition-transform pr-[9px] w-full lg:w-auto justify-center lg:justify-start cursor-pointer">
                   <span className="text-[14px] border-r border-white rounded-r-full py-2 px-[12px] pl-[16px]">
                     Schedule
                   </span>

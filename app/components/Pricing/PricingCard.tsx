@@ -119,7 +119,7 @@ export const PricingCard = ({
         {/* ── Frosted container (z-30) ── */}
         <div className="relative z-30 bg-white/40 backdrop-blur-xl ">
           <div
-            className="absolute -top-[-8px] left-0 lg:left-1 w-full max-w-[820px] lg:max-w-[334px] h-[150px] blur-[16px] opacity-90 pointer-events-none rounded-t-[32px]"
+            className="absolute top-[8px] left-0 w-full h-[150px] blur-[16px] opacity-90 pointer-events-none rounded-t-[32px]"
             style={{
               background: "linear-gradient(to right, #eef3ff, #ede8ff)",
               WebkitMaskImage:
